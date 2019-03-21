@@ -33,4 +33,4 @@ The aim of the project is to learn the atari pong game engine. That is, to have 
  ##### Results
  ![](frame1.png)
  ![](frame2.png)  
- Pong bar moves down in the next image that the model generates using our input key embedding and previous images when we press the down arrow key.
+ Pong bar moves down in the next image when we press the down arrow key. The model learns to generate the entire image frame using our input key embedding and previous images.
