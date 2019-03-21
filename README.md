@@ -11,18 +11,18 @@ The aim of the project is to learn the atari pong game engine. That is, to have 
          * val: validation TFRecord files
          * test: test TFRecord files
          * mean.npy: mean image from training files for mean centering
-    * policy_grad.py: policy gradient network on atari pong open ai game engine
+    * policy_grad.py: policy gradient network on atari pong open ai game engine (inspired by: <http://karpathy.github.io/2016/05/31/rl/>)
     * episode_collector.py: helper function to save TFRecord files
     * episode_reader.py: helper function to read TFRecord files
     * compute_mean.py: calculates and saves mean image.
- * ModelCheckpoints: Saved model checkpoints restored during training
+ * ModelCheckpoints: Saved model checkpoints restored during training or testing
  * TFBoard: Tensorboard files
  * Utils: Helper functions
      * tf_ops.py: helper function for model layers
-     * dshandlehook.py: helper function for run time queue switching (feedable iterator with state)
- * datapipeline.py: creates multi-threaded buffer based queue pipelines from TFRecords for scale training
+     * dshandlehook.py: helper function for run time queue switching between train and val (feedable iterator with state)
+ * datapipeline.py: creates run time switchable (with state) multi-threaded buffer based queue pipelines from TFRecords for scale training. Includes pre-processing in pipeline.
  * model.py: model neural network
- * train.py: run to train
+ * train.py: run to train (monitored training session for checkpoint and tensorboard)
  * test.py: run to test  
   
  ##### Instructions to run
@@ -32,4 +32,5 @@ The aim of the project is to learn the atari pong game engine. That is, to have 
 
  ##### Results
  ![](frame1.png)
- ![](frame2.png)
+ ![](frame2.png)  
+ Pong bar moves down when we press the down arrow key.
