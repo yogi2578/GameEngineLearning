@@ -28,4 +28,8 @@ The aim of the project is to learn the atari pong game engine. That is, to have 
  ##### Instructions to run
 * Data collection: Run policy_grad.py to collect data as TFRecord files in Pong-v0 folder. Create val and test folders and move validation and testing data there. Run compute_mean.py to generate mean image in Pong-v0 folder. Now move train data to train folder.
 * Training: Run train.py. Launch tensorboard using files in TFBoard folder to monitor training.
-* Testing: Run test.py
+* Testing: Run test.py  
+
+ ##### Results
+ ![](frame1.png)
+ ![](frame2.png)
